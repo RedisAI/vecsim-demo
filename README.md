@@ -18,7 +18,7 @@ Before you start, make sure you have Docker.
 Clone this repo
 ```
 gh repo clone RedisAI/vecsim-demo
-cd vec-sim-demo
+cd vecsim-demo
 ```
 Open 2 Terminal sessions
 
