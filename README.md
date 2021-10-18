@@ -1,3 +1,7 @@
+# Pre-Requisites
+* A Conda installation [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+* 400MB available in your HD
+
 # Semantic Search and Visual Similarity Demo
 
 In this demo, you will experiment with 2 key applications of Vector Similarity Search that are commonly found in modern e-commerce applications
@@ -11,7 +15,7 @@ Before you start, make sure you have Docker.
 
 Clone this repo
 ```
-gh repo clone esandoval30/vec-sim-demo
+gh repo clone RedisAI/vecsim-demo
 cd vec-sim-demo
 ```
 Open 2 Terminal sessions
@@ -19,7 +23,7 @@ Open 2 Terminal sessions
 On the 1st Terminal session, fire up a container with Redis VecSim.
 Run the following commands
 ```
-docker pull redislabs/redisearch:feature-vecsimpytorch torchvision Pillow -c conda-forge
+docker pull redislabs/redisearch:feature-vecsim
 docker run -it --rm -p 6379:6379 redislabs/redisearch:feature-vecsim
 ```
 Leave that container running
