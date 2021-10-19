@@ -1,5 +1,4 @@
 # Pre-Requisites
-* [Github CLI - gh command](https://github.com/cli/cli)
 * Docker
 * A Conda installation [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 * 400MB available in your HD
