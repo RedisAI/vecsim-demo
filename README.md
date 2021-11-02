@@ -79,7 +79,13 @@ tar -xzf  abo-images-small.tar -C data/
 Using a similar approach, you can generate vector representation of product image data!
 This time, you will be using a pre-trained Vision models from torchvision wrapped by the Img2Vec python library
 
-Here's a ["Notebook with step-by-step instructions"](VisualSearch1k.ipynb)
+Here's a Notebook with step-by-step instructions
+
+```
+jupyter lab VisualSearch1k.ipynb
+```
+
+
 
 
 # About the Amazon Product data
