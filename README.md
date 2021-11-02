@@ -68,6 +68,13 @@ This time, You will be using previously generated vectors for 100k products in t
 
 # Visual Search
 
+Download and unzip the product images.
+```
+wget -c https://amazon-berkeley-objects.s3.amazonaws.com/archives/abo-images-small.tar
+```
+
+
+
 Using a similar approach, you can generate vector representation of product image data!
 This time, you will be using a pre-trained Vision models from torchvision wrapped by the Img2Vec python library
 
