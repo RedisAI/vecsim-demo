@@ -1,8 +1,8 @@
 # Pre-Requisites
-* [Github CLI - gh command](https://github.com/cli/cli)
 * Docker
-* A Conda installation [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
-* 400MB available in your HD
+* A Conda installation 
+    * [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+* 3GB available in your HD
 
 
 # Semantic Search and Visual Similarity Demo
@@ -18,7 +18,7 @@ Before you start, make sure you have Docker.
 
 Clone this repo
 ```
-gh repo clone RedisAI/vecsim-demo
+git clone https://github.com/RedisAI/vecsim-demo.git
 cd vecsim-demo
 ```
 Open 2 Terminal sessions
