@@ -68,9 +68,10 @@ This time, You will be using previously generated vectors for 100k products in t
 
 # Visual Search
 
-Download and unzip the product images.
+Download and uncompress the product images.
 ```
 wget -c https://amazon-berkeley-objects.s3.amazonaws.com/archives/abo-images-small.tar
+tar -xzf  abo-images-small.tar -C data/
 ```
 
 
