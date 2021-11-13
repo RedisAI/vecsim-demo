@@ -33,8 +33,7 @@ docker run -it --rm -p 6379:6379 redislabs/redisearch:feature-vecsim
 Leave that container running
 
 ## Jupyter Notebook Set Up
-Go back to your 2nd Terminal session and set up your notebook environment.
-
+On your 2nd Terminal session 
 
 You will need to set up a python 3.8 virtual environment
 
