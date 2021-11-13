@@ -53,15 +53,15 @@ pip3 install img2vec_pytorch
 ```
 # Semantic Search 
 It's time to upload vector representation of product text fields.
-You will use a pre-trained Natural Language Processing (NLP) model from Huggingface
+You will use a pre-trained Natural Language Processing (NLP) model from Hugging Face
 
 
-Now open a notebook illustrating how to generate vectors for the "item_keywords" field
+Open a notebook illustrating how to generate vectors for the "item_keywords" field
 ```
 jupyter lab TextEmbeddings.ipynb
 ```
 
-The source code for the notebook is here["Generate Embeddings for item keyword data in 1000 products"](TextEmbeddings.ipynb). 
+The source code for the notebook is here["Generate Embeddings for item keyword data in 1,000 products"](TextEmbeddings.ipynb). 
 
 And here's the [same exercise with 100K products](100kTextEmbeddings.ipynb). 
 This time, You will be using previously generated vectors for 100k products in the Amazon dataset.
@@ -74,19 +74,15 @@ wget -c https://amazon-berkeley-objects.s3.amazonaws.com/archives/abo-images-sma
 tar -xzf  abo-images-small.tar -C data/
 ```
 
-
-
 Using a similar approach, you can generate vector representation of product image data!
+
 This time, you will be using a pre-trained Vision models from torchvision wrapped by the Img2Vec python library
 
-Here's a Notebook with step-by-step instructions
+Open the notebook with step-by-step instructions
 
 ```
 jupyter lab VisualSearch1k.ipynb
 ```
-
-
-
 
 # About the Amazon Product data
 The dataset used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
