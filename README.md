@@ -14,10 +14,6 @@ In this demo, you will experiment with 2 key applications of Vector Similarity S
 
 
 ## Redis Container with Vector Similarity
-docker run -it -d -p 6379:6379 --volume=/Users/edsandoval/docker-data:/data redislabs/redisearch:feature-vecsim
-
-docker run -it --rm -p 6379:6379 redislabs/redisearch:feature-vecsim
-
 
 Before you start, make sure you have Docker.
 
