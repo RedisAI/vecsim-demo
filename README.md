@@ -1,4 +1,5 @@
 # Pre-Requisites
+* [Git LFS](https://git-lfs.github.com/)
 * Docker
 * A Conda installation 
     * [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
@@ -13,6 +14,10 @@ In this demo, you will experiment with 2 key applications of Vector Similarity S
 
 
 ## Redis Container with Vector Similarity
+docker run -it -d -p 6379:6379 --volume=/Users/edsandoval/docker-data:/data redislabs/redisearch:feature-vecsim
+
+docker run -it --rm -p 6379:6379 redislabs/redisearch:feature-vecsim
+
 
 Before you start, make sure you have Docker.
 
@@ -75,6 +80,7 @@ tar -xzf  abo-images-small.tar -C data/
 ```
 
 
+
 Using a similar approach, you can generate vector representation of product image data!
 This time, you will be using a pre-trained Vision models from torchvision wrapped by the Img2Vec python library
 
@@ -84,12 +90,8 @@ Here's a Notebook with step-by-step instructions
 jupyter lab VisualSearch1k.ipynb
 ```
 
-And here's the [same exercise with 100K products](VisualSearch100k.ipynb). 
-This time, You will be loading previously generated vectors for images of 100k products in the Amazon dataset.
 
-```
-jupyter lab VisualSearch100k.ipynb
-```
+
 
 # About the Amazon Product data
 The dataset used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
