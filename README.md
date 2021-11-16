@@ -1,5 +1,9 @@
 # Pre-Requisites
-* [Git LFS](https://git-lfs.github.com/)
+* Install [Git LFS](https://git-lfs.github.com/).
+    * Make sure you initialize LFS by runing
+    ```
+    git lfs install
+    ```
 * Docker
 * A Conda installation 
     * [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
