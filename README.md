@@ -12,7 +12,7 @@
 
 # Semantic Search and Visual Similarity Demo
 
-This demo goes along with [Redis Annoucement of Redis Vector Similarity Search](https://redis.com/blog/build-intelligent-apps-redis-vector-similarity-search/)
+This demo goes along with the [Annoucement of a New Redis Vector Similarity Search](https://redis.com/blog/build-intelligent-apps-redis-vector-similarity-search/)
 
 In this demo, you will experiment with 2 key applications of Vector Similarity Search that are commonly found in modern e-commerce applications
 * Semantic Search : You will be able to search products given a text description of a product
