@@ -4,3 +4,5 @@
 *.tar
 *.gz
 *.png
+data/images/
+venv/
