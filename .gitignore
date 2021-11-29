@@ -6,3 +6,8 @@
 *.png
 data/images/
 venv/
+
+.cache/
+.ipython/
+.jupyter/
+.local/
