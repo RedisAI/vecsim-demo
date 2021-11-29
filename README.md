@@ -6,6 +6,7 @@
     ```
 * Docker
 Note: For macOS Big Sur, please turn on `Big Sur virtualization.framework` to support AVX512 operations.
+![Big Sur Docker Settings](./docs/big_sur_docker)
 * A Conda installation 
     * [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 * 3GB available in your HD
