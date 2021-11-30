@@ -5,11 +5,6 @@
     git lfs install
     ```
 * Docker
-Note: For macOS Big Sur, please turn on `Big Sur virtualization.framework` to support AVX512 operations.
-![Big Sur Docker Settings](./docs/big_sur_docker)
-* A Conda installation 
-    * [Install Anacoda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
-* 3GB available in your HD
 
 
 # Semantic Search and Visual Similarity Demo
@@ -20,55 +15,30 @@ In this demo, you will experiment with 2 key applications of Vector Similarity S
 * Semantic Search : You will be able to search products given a text description of a product
 * Visual Search: You will be able to find products that are "visually" similar to a given image
 
-
-
-## Redis Container with Vector Similarity
-
-Before you start, make sure you have Docker.
-
+## Start the demo
 Clone this repo
 ```
 git clone https://github.com/RedisAI/vecsim-demo.git
+```
+
+Start docker-compose. Note, This will download a 3GB data set and will take around 10-15 minutes, depending on your network connection.
+
+```
 cd vecsim-demo
+docker-compose up
 ```
-Open 2 Terminal sessions
 
-On the 1st Terminal session, fire up a container with Redis VecSim.
-Run the following commands
+Once the docker compose finishes open a web browser on the following address (or just click on the link from the docker-compose logs)
 ```
-docker pull redislabs/redisearch:feature-vecsim
-docker run -it --rm -p 6379:6379 redislabs/redisearch:feature-vecsim
+localhost:8888
 ```
-Leave that container running
 
-## Jupyter Notebook Set Up
-On your 2nd Terminal session 
-
-You will need to set up a python 3.8 virtual environment
-
-I will use Conda but you are free to use any tool of your choice to install a few dependencies
-
-```
-conda create --name vsim python=3.8 pip grpcio jupyterlab nb_conda numpy pandas sentence-transformers ipywidgets pytorch torchvision Pillow -c conda-forge
-```
-Activate your new environment
-```
-conda activate vsim
-```
-Then pip install redis-search(private-preview version) & img2vec within your new environment
-```
-pip3 install git+https://github.com/RediSearch/redisearch-py.git@params
-pip3 install img2vec_pytorch
-```
 # Semantic Search 
 It's time to upload vector representation of product text fields.
 You will use a pre-trained Natural Language Processing (NLP) model from Hugging Face
 
 
-Open a notebook illustrating how to generate vectors for the "item_keywords" field
-```
-jupyter lab TextEmbeddings.ipynb
-```
+Open the `TextEmbeddings.ipynb` notebook illustrating how to generate vectors for the "item_keywords" field
 
 The source code for the notebook is here["Generate Embeddings for item keyword data in 1,000 products"](TextEmbeddings.ipynb). 
 
@@ -77,21 +47,11 @@ This time, You will be using previously generated vectors for 100k products in t
 
 # Visual Search
 
-Download and uncompress the product images.
-```
-wget -c https://amazon-berkeley-objects.s3.amazonaws.com/archives/abo-images-small.tar
-tar -xzf  abo-images-small.tar -C data/
-```
-
 Using a similar approach, you can generate vector representation of product image data!
 
 This time, you will be using a pre-trained Vision models from torchvision wrapped by the Img2Vec python library
 
-Open the notebook with step-by-step instructions
-
-```
-jupyter lab VisualSearch1k.ipynb
-```
+Open the `VisualSearch1k.ipynb` notebook and you will find the step-by-step instructions
 
 # About the Amazon Product data
 The dataset used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
