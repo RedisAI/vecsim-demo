@@ -29,7 +29,7 @@ git clone https://github.com/RedisAI/vecsim-demo.git
 # Fire Up the Docker containers
 Use docker-compose to start up 2 containers:
 * vesim: A redis container with Vector Similarity Search (VSS) on port 6379
-* jupyter: A python notebook server pre-loaded with 4 notebooks. 
+* jupyter: A python notebook server on port 8888 pre-loaded with 4 notebooks
     * 2 notebooks illustrating how to perform Visual Similarity with Redis VSS
     * 2 notebooks illustrating how to perform semantic Similarity with Redis VSS
 ```
@@ -74,7 +74,11 @@ Open this notebook [http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb](ht
 You will load ~80k previously-generated embeddings for the first 100,000 products in the dataset.
 You'll perform visual similarity on a larger dataset using two indexing methods (HNSW and brute-force)
 
-
+# Stop the Docker containers
+```
+cd vecsim-demo
+docker-compose down
+```
 
 # About the Amazon Product data
 The dataset used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
