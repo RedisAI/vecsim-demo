@@ -1,57 +1,80 @@
-# Pre-Requisites
-* Install [Git LFS](https://git-lfs.github.com/).
+# Visual and Semantic Similarity with Redis
+
+This demo goes along with the [Annoucement of a New Redis Vector Similarity Search](https://redis.com/blog/build-intelligent-apps-redis-vector-similarity-search/)
+
+You will experiment with two key applications of Vector Similarity Search application using a realistic dataset:
+
+* Semantic Search: Given a sentence check products with semantically similar descriptions
+* Visual Search: Given a query image, find the Top K most "visually" similar in the catalogue
+
+# About the Amazon Product dataset
+The CSV product data used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
+
+Each row in the CSV file represents a product in the original dataset.
+The data in each row was derived from the JSON document for each product in the original dataset.
+
+# Before you start
+* Install [Git LFS](https://git-lfs.github.com/)
     * Make sure you initialize LFS by runing
     ```
     git lfs install
     ```
 * Docker
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
-
-# Semantic Search and Visual Similarity Demo
-
-This demo goes along with the [Annoucement of a New Redis Vector Similarity Search](https://redis.com/blog/build-intelligent-apps-redis-vector-similarity-search/)
-
-In this demo, you will experiment with 2 key applications of Vector Similarity Search that are commonly found in modern e-commerce applications
-* Semantic Search : You will be able to search products given a text description of a product
-* Visual Search: You will be able to find products that are "visually" similar to a given image
-
-## Start the demo
-Clone this repo
+# Clone the Repo 
 ```
 git clone https://github.com/RedisAI/vecsim-demo.git
 ```
-
-Start docker-compose. Note, This will download a 3GB data set and will take around 10-15 minutes, depending on your network connection.
-
+# Fire Up the Docker containers
+Use docker-compose to start up 2 containers:
+* vesim: A redis container with Vector Similarity Search (VSS) on port 6379
+* jupyter: A python notebook server pre-loaded with 4 notebooks. 
+    * 2 notebooks illustrating how to perform Visual Similarity with Redis VSS
+    * 2 notebooks illustrating how to perform semantic Similarity with Redis VSS
 ```
 cd vecsim-demo
 docker-compose up
 ```
+**NOTE**: The first time you run the above command, it will take 5-10 minutes (depending on your network)
+The jupyter container downloads a 3.25GB tar file with product images from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
 
-Once the docker compose finishes open a web browser on the following address (or just click on the link from the docker-compose logs)
-```
-localhost:8888
-```
+# Launch the Jupyter Notebooks
+Monitor the logs and look out for the link to launch jupyter on your local machine
+![copy the URL](./docs/jupyter-log.png)
 
-# Semantic Search 
-It's time to upload vector representation of product text fields.
-You will use a pre-trained Natural Language Processing (NLP) model from Hugging Face
+Open a local browser to this link
 
 
-Open the `TextEmbeddings.ipynb` notebook illustrating how to generate vectors for the "item_keywords" field
+# Step 1: Semantic Similarity - Part I
+Open this notebook [http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb)
 
-The source code for the notebook is here["Generate Embeddings for item keyword data in 1,000 products"](TextEmbeddings.ipynb). 
+Run All Cells and check the outputs
 
-And here's the [same exercise with 100K products](100kTextEmbeddings.ipynb). 
-This time, You will be using previously generated vectors for 100k products in the Amazon dataset.
+You will generate embeddings for 1,000 products and perform semantic similarity using two indexing methods(HNSW and brute-force)
 
-# Visual Search
+# Step 2: Semantic Similarity - Part II
+Open this notebook [http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb)
 
-Using a similar approach, you can generate vector representation of product image data!
+Run All Cells and check the outputs
 
-This time, you will be using a pre-trained Vision models from torchvision wrapped by the Img2Vec python library
+You will load ~100k previously-generated embeddings for the first 100,000 products in the dataset.
+You'll perform semantic similarity on a larger dataset
 
-Open the `VisualSearch1k.ipynb` notebook and you will find the step-by-step instructions
+# Step 3: Visual Similarity - Part I
+Open this notebook [http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb)
+
+Run All Cells and check the outputs
+
+You will generate embeddings for 1,000 product images and perform visual similarity using two indexing methods
+
+# Step 4: Visual Similarity - Part II
+Open this notebook [http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb)
+
+You will load ~80k previously-generated embeddings for the first 100,000 products in the dataset.
+You'll perform visual similarity on a larger dataset using two indexing methods (HNSW and brute-force)
+
+
 
 # About the Amazon Product data
 The dataset used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
