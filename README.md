@@ -76,7 +76,6 @@ You'll perform visual similarity on a larger dataset using two indexing methods 
 
 # Stop the Docker containers
 ```
-cd vecsim-demo
 docker-compose down
 ```
 
