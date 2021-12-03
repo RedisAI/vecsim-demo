@@ -10,8 +10,8 @@ You will experiment with two key applications of Vector Similarity Search applic
 # About the Amazon Product dataset
 The CSV product data used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
 
-Each row in the CSV file represents a product in the original dataset.
-The data in each row was derived from the JSON document for each product in the original dataset.
+Each row in the CSV file correspond to a product in the original dataset.
+
 
 # Before you start
 * Install [Git LFS](https://git-lfs.github.com/)
