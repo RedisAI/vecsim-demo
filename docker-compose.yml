@@ -7,10 +7,10 @@ services:
     volumes:
       - ./data/product_data.csv:/home/jovyan/data/product_data.csv
       - ./data/product_image_data.csv:/home/jovyan/data/product_image_data.csv
-      - ./TextEmbeddings.ipynb:/home/jovyan/TextEmbeddings.ipynb
+      - ./SemanticSearch1k.ipynb:/home/jovyan/SemanticSearch1k.ipynb
       - ./VisualSearch1k.ipynb:/home/jovyan/VisualSearch1k.ipynb
       - ./VisualSearch100k.ipynb:/home/jovyan/VisualSearch100k.ipynb
-      - ./100kTextEmbeddings.ipynb:/home/jovyan/100kTextEmbeddings.ipynb
+      - ./SemanticSearch100k.ipynb:/home/jovyan/SemanticSearch100k.ipynb
       - ./100k-image-vectors.npy:/home/jovyan/100k-image-vectors.npy
       - ./100k-item-keyword-vectors.npy:/home/jovyan/100k-item-keyword-vectors.npy
   vecsim:
