@@ -47,14 +47,14 @@ Open a local browser to this link
 
 
 # Step 1: Semantic Similarity - Part I
-Open this notebook [http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb)
+Open this notebook [http://127.0.0.1:8888/notebooks/SemanticSearch1k.ipynb](http://127.0.0.1:8888/notebooks/SemanticSearch1k.ipynb)
 
 Run All Cells and check the outputs
 
 You will generate embeddings for 1,000 products and perform semantic similarity using two indexing methods(HNSW and brute-force)
 
 # Step 2: Semantic Similarity - Part II
-Open this notebook [http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb)
+Open this notebook [http://127.0.0.1:8888/notebooks/SemanticSearch100k.ipynb](http://127.0.0.1:8888/notebooks/SemanticSearch100k.ipynb)
 
 Run All Cells and check the outputs
 
@@ -62,16 +62,15 @@ You will load ~100k previously-generated embeddings for the first 100,000 produc
 You'll perform semantic similarity on a larger dataset
 
 # Step 3: Visual Similarity - Part I
-Open this notebook [http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/TextEmbeddings.ipynb)
+Open this notebook [http://127.0.0.1:8888/notebooks/VisualSearch1k.ipynb](http://127.0.0.1:8888/notebooks/VisualSearch1k.ipynb)
 
 Run All Cells and check the outputs
 
 You will generate embeddings for 1,000 product images and perform visual similarity using two indexing methods
 
 # Step 4: Visual Similarity - Part II
-Open this notebook [http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb](http://127.0.0.1:8888/notebooks/100kTextEmbeddings.ipynb)
+Open this notebook [http://127.0.0.1:8888/notebooks/VisualSearch100k.ipynb](http://127.0.0.1:8888/notebooks/VisualSearch100k.ipynb)
 
-You will load ~80k previously-generated embeddings for the first 100,000 products in the dataset.
 You'll perform visual similarity on a larger dataset using two indexing methods (HNSW and brute-force)
 
 # Stop the Docker containers
