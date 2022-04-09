@@ -4,7 +4,7 @@ This demo goes along with the [Annoucement of a New Redis Vector Similarity Sear
 
 You will experiment with two key applications of Vector Similarity Search application using a realistic dataset:
 
-* Semantic Search: Given a sentence check products with semantically similar descriptions
+* Semantic Search: Given a sentence check products with semantically similar text in the product keywords
 * Visual Search: Given a query image, find the Top K most "visually" similar in the catalogue
 
 # About the Amazon Product dataset
