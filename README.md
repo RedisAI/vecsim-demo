@@ -44,7 +44,7 @@ Monitor the logs and look out for the link to launch jupyter on your local machi
 ![copy the URL](./docs/jupyter-log.png)
 OR run the following
 ```
-jupyter-notebook
+jupyter notebook
 ```
 
 Open a local browser to this link
