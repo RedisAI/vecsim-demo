@@ -42,6 +42,10 @@ The jupyter container downloads a 3.25GB tar file with product images from the [
 # Launch the Jupyter Notebooks
 Monitor the logs and look out for the link to launch jupyter on your local machine
 ![copy the URL](./docs/jupyter-log.png)
+OR run the following
+```
+jupyter notebook
+```
 
 Open a local browser to this link
 
