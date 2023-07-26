@@ -1,6 +1,6 @@
 # Visual and Semantic Similarity with Redis
 
-This demo goes along with the [Annoucement of a New Redis Vector Similarity Search](https://redis.com/blog/build-intelligent-apps-redis-vector-similarity-search/)
+This demo goes along with the [Announcement of a New Redis Vector Similarity Search](https://redis.com/blog/build-intelligent-apps-redis-vector-similarity-search/)
 
 You will experiment with two key applications of Vector Similarity Search application using a realistic dataset:
 
@@ -16,25 +16,25 @@ Each row in the CSV file correspond to a product in the original dataset.
 # Before you start
 * Install [Git LFS](https://git-lfs.github.com/)
     * Make sure you initialize LFS by runing
-    ```
+    ```sh
     git lfs install
     ```
 * Docker
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
-# Clone the Repo 
-```
+# Clone the Repo
+```sh
 git clone https://github.com/RedisAI/vecsim-demo.git
 ```
 # Fire Up the Docker containers
-Use docker-compose to start up 2 containers:
+Use `docker compose` to start up 2 containers:
 * vesim: A redis container with Vector Similarity Search (VSS) on port 6379
 * jupyter: A python notebook server on port 8888 pre-loaded with 4 notebooks
     * 2 notebooks illustrating how to perform Visual Similarity with Redis VSS
     * 2 notebooks illustrating how to perform semantic Similarity with Redis VSS
-```
+```sh
 cd vecsim-demo
-docker-compose up
+docker compose up
 ```
 **NOTE**: The first time you run the above command, it will take 5-10 minutes (depending on your network)
 The jupyter container downloads a 3.25GB tar file with product images from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
@@ -42,8 +42,8 @@ The jupyter container downloads a 3.25GB tar file with product images from the [
 # Launch the Jupyter Notebooks
 Monitor the logs and look out for the link to launch jupyter on your local machine
 ![copy the URL](./docs/jupyter-log.png)
-OR run the following
-```
+Or run the following:
+```sh
 jupyter notebook
 ```
 
@@ -78,25 +78,25 @@ Open this notebook [http://127.0.0.1:8888/notebooks/VisualSearch100k.ipynb](http
 You'll perform visual similarity on a larger dataset using two indexing methods (HNSW and brute-force)
 
 # Stop the Docker containers
-```
-docker-compose down
+```sh
+docker compose down
 ```
 
 # About the Amazon Product data
 The dataset used in this demo was derived from the ["Amazon Berkeley Objects Dataset"](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)
 
-In particular, each long text field in the product_data.csv was extracted from the original JSON encoded object representing each product. 
+In particular, each long text field in the product_data.csv was extracted from the original JSON encoded object representing each product.
 
 Thanks to Amazon.com for sharing the original dataset. This includes all product data, images and 3D models under the [Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-Credit to the creators of the dataset: 
-Matthieu Guillaumin Amazon.com 
-Thomas Dideriksen Amazon.com 
-Kenan Deng Amazon.com 
-Himanshu Arora Amazon.com 
-Arnab Dhua Amazon.com 
-Xi (Brian) Zhang Amazon.com 
-Tomas Yago-Vicente Amazon.com 
-Jasmine Collins UC Berkeley 
-Shubham Goel UC Berkeley 
+Credit to the creators of the dataset:
+Matthieu Guillaumin Amazon.com
+Thomas Dideriksen Amazon.com
+Kenan Deng Amazon.com
+Himanshu Arora Amazon.com
+Arnab Dhua Amazon.com
+Xi (Brian) Zhang Amazon.com
+Tomas Yago-Vicente Amazon.com
+Jasmine Collins UC Berkeley
+Shubham Goel UC Berkeley
 Jitendra Malik UC Berkeley
